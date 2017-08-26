@@ -9,18 +9,77 @@
 
 /* General */
 body {
-	background-color: #F5F4F0;
 	font-family: "Open Sans Light";
 	font-weight: 200;
 	height: 100%;
 	color: #454545;
 }
+
 h1 {
-	font-family: "Open Sans Regular";
+	font-family: 'Lato', sans-serif;
 	margin-left: auto;
 	margin-right: auto;
 	text-align: center;
-	color: #EE6059;
+	color: #ffffff;
+}
+
+.container {
+	display: flex;
+  	justify-content: center;
+  	align-items: center;
+  	z-index: 9990;
+}
+
+.content {
+	top: 150px;
+	background: rgba(231,76,60,0.9);
+	height: 35vmax;
+	width: 60%;
+	border-radius: 5px;
+ 	box-shadow: 4px 4px 7px rgba(40, 40, 40, 0.2);
+ 	z-index: 9990;
+}
+
+/* Stripes */
+.top-panel {
+	position: relative;
+}
+
+.bottom-panel {
+	position: relative;
+	right: 0px;
+	width: 100%;
+	height: 50px;
+}
+
+.stripe-left {
+  position: absolute;
+  left: -8%;
+  top: 15px;
+  width: 35%;
+  background-color: #ffffff;
+  height: 50px;
+  transform: skew(0deg) rotate(-35deg);
+  box-shadow: 
+        0px 11px 15px -10px rgba(0,0,0,0.3),
+        0px -11px 15px -10px rgba(0,0,0,0.3); 
+}
+.stripe-right {
+  position: absolute;
+  bottom: 6px;
+  right: -8%;
+  width: 35%;
+  background-color: #ffffff;
+  height: 50px;
+  transform: skew(0deg) rotate(-35deg);
+  box-shadow: 
+        0px 11px 15px -10px rgba(0,0,0,0.3),
+        0px -11px 15px -10px rgba(0,0,0,0.3); 
+}
+
+.lg-div {
+	height: 120px;
+	width: 100%;
 }
 
 /* About me section */
@@ -33,6 +92,10 @@ h1 {
 	height: auto;
 }
 
+#bio {
+	color: #ffffff;
+}
+
 /* Icons for github and linkedIn */
 #icons {
 	display: block;
@@ -43,10 +106,10 @@ h1 {
 	display: inline-block;
 	max-width: 60px;
 }
-#icon-container {
-	display: block;
-	margin: 0 auto 0 auto;
-	width: 125px;
+#icons {
+	display: flex;
+  	justify-content: center;
+  	align-items: center;
 }
 
 /* Randomly generated fact section */
@@ -55,64 +118,28 @@ h1 {
 	margin-left: auto;
 	margin-right: auto;
 	display: block;
-	height: auto;
+	height: 100px;
 }
 #fun-fact p {
 	text-align: center;
 	margin-bottom: 0px;
 	max-width: 80%;
-	color: #EE6059;
 }
 #random-fun-fact {
 	font-family: "Open Sans Regular";
 	font-weight: 800;
+	color: #ffffff;
 }
 #fun-fact span {
 	font-family: "Open Sans Light";
 	font-weight: 200;
-	color: #454545;
+	color: #ffffff;
 }
 #get-new-fact {
 	font-family: "Open Sans Light";
 	font-weight: 200;
 	font-size: small;
-}
-
-/* Footer area */
-#footer {
-	height: 1px;
-}
-#footer p {
-	font-family: "Open Sans Regular";
-	font-weight: 800;
-	color: #EE6059;
-	margin-right: 15px;
-	float: right;
-}
-#footer a {
-	float: right;
-	font-family: "Open Sans Light";
-	font-weight: 200;
-	color: #454545;
-}
-
-/* Some simple containers for organizing content */
-.content {
-	position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    height: 100%;
-    display: table;
-}
-.section {
-	display: table-row;
-	width: 100%;
-}
-.section-content {
-	display: table-cell;
-	vertical-align: middle;
-	width: 100%;
+	color: #dadada;
 }
 
 /* ANIMATIONS - all credit to Alex Gurevich at fabriceleven.com */
