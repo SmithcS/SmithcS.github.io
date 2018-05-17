@@ -6,10 +6,13 @@
 		<meta name="description" content="Smith Sopp's website">
     	<meta name="keywords" content="Smith Sopp, Smith, Sopp">
    		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-		
+   		<!-- Using Bootstrap for grid & utility. (https://getbootstrap.com/) -->
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">	
 		<link rel="stylesheet" type="text/css" href="css/main.css">
+		<!-- Using Adobe Typekit for fonts. (https://typekit.com/) -->
 		<link rel="stylesheet" href="https://use.typekit.net/yww3eaa.css">
+		<!-- Using feather icons for icons. (https://feathericons.com/) -->
+		<script src="https://unpkg.com/feather-icons/dist/feather.min.js"></script>
 	</head>
 
 	<body>
@@ -26,7 +29,7 @@
 
 		</div>
 
-		<div class="med-div"></div>
+		<div class="med-div bg-red"></div>
 
 		<div class="container content">
 			<div class="row content-header-right">
@@ -35,10 +38,11 @@
 				</div>
 			</div>
 			<div class="row">
-				<div class="col">
+				<div class="col-md-12">
 					<p>I'm a people person, leader, and current university student with experience in programming and UX design. I love the creative solution to the everyday problem, the moment when the big picture becomes crystal clear, and soaking up information about technology, design, and the world around me. </p>
 				</div>
 			</div>
+
 			<div class="row content-subheader-left">
 				<div class="col-md-12">
 					<p>Projects</p>
@@ -46,7 +50,16 @@
 			</div>
 			<div class="row justify-content-around">
 				<div class="col-md-5 project-box ">
-				
+					<div class="row">
+						<div class="col-md-12 project-header">
+							<p>Test Header</p>
+						</div>
+					</div>
+					<div class="row">
+						<div class="col-md-12 project-description">
+							<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+						</div>
+					</div>
 				</div>
 				<div class="col-md-5 project-box">
 					
@@ -58,11 +71,126 @@
 					
 				</div>
 			</div>
+
+			<div class="row content-subheader-right">
+				<div class="col-md-12">
+					<p>Experience</p>
+				</div>
+			</div>
+
+			<div class="row justify-content-between exp-div">
+				<div class="col-md-6 exp-title">DevOps Intern</div>
+				<div class="col-md-6 exp-date">Summer 2018</div>
+				<div class="col-md-12 exp-company">Blackboard</div>
+			</div>
+
+			<div class="circle"></div>
+			<div class="line"></div>
+			<div class="circle"></div>
+			
+			<div class="row justify-content-between exp-div">
+				<div class="col-md-6 exp-title">Software Engineering Intern</div>
+				<div class="col-md-6 exp-date">Summer 2017</div>
+				<div class="col-md-12 exp-company">Vanguard</div>
+			</div>
+
+
+			<div class="circle"></div>
+			<div class="line"></div>
+			<div class="circle"></div>
+
+			<div class="row justify-content-between exp-div">
+				<div class="col-md-6 exp-title">Embedded Software Engineer Co-op</div>
+				<div class="col-md-6 exp-date">May 2016 - Dec 2016</div>
+				<div class="col-md-12 exp-company">Rockwell Automation</div>
+			</div>
+
+			<div class="circle"></div>
+			<div class="line"></div>
+			<div class="circle"></div>
+
+			<div class="row justify-content-between ">
+				<div class="offset-md-3 col-md-6 exp-div exp-resume">Want to know more? Check out my <span class="header-link"><a href="assets/Smith-Sopp-Resume.pdf">Resume</a></span>.</div>
+			</div>
+
+			<div class="row content-subheader-left">
+				<div class="col-md-12">
+					<p>Other</p>
+				</div>
+			</div>
+
+			<div class="row justify-content-around">
+				<div class="col-md-5 other-box">
+					<div class="row pin">
+						<div class="col-md-12">
+							<img src="assets/images/pin-red.svg" class="mx-auto d-block"></img>
+						</div>
+					</div>
+					<div class="row">
+						<div class="col-md-6 exp-title">Watercolor</div>
+
+					</div>
+				</div>
+				<div class="col-md-5 other-box">
+					<div class="row pin">
+						<div class="col-md-12">
+							<img src="assets/images/pin-blue.svg" class="mx-auto d-block"></img>
+						</div>
+					</div>
+					<div class="row">
+						<div class="col-md-6 exp-title">Talks</div>
+
+					</div>
+				</div>
+			</div>
+
+			<div class="row justify-content-around">
+				<div class="col-md-8 fun-fact">
+					<div class="row pin">
+						<div class="col-md-12">
+							<img src="assets/images/pin-red.svg" class="mx-auto d-block"></img>
+						</div>
+					</div>
+
+					<div id="fun-fact" class="fade-in one">
+						<p id="random-fun-fact"> Random Fun Fact: <span id="fact"></span></p>
+						<p id="get-new-fact">(Want another? <span class="header-link">Click here!</span>)</p>
+					</div>
+				</div>
+			</div>
+
 		</div>
+
+		<div class="med-div bg-white"></div>
+
+		<footer class="footer">
+      		<div class="container-fluid">
+      			<div class="row justify-content-center footer-links">
+      				<div class="col-md-3">
+      					<a href="https://github.com/SmithcS"><i data-feather="github"></i></a>
+      				</div>
+      				<div class="col-md-3">
+      					<a href="https://www.linkedin.com/in/smithsopp/"><i data-feather="linkedin"></i></a>
+      				</div>
+      				<div class="col-md-3">
+      					<a href="mailto:smithsopp@gmail.com"><i data-feather="mail"></i></a>
+      				</div>
+      			</div>
+        		<div class="row">
+        			<div class="col-md-3 footer-block-1"></div>
+        			<div class="col-md-3 footer-block-2"></div>
+        			<div class="col-md-3 footer-block-3"></div>
+        			<div class="col-md-3 footer-block-4"></div>
+        		</div>
+      		</div>
+    	</footer>
 
 	</body>
 
-	<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <!-- Loading in scripts after content. -->
+	<script> feather.replace() </script>
+	<script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+    <script src="js/main.js"></script>
 </html> 

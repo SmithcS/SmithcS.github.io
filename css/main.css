@@ -57,14 +57,37 @@ Start my CSS
 
 /* General */
 
+html {
+  position: relative;
+  min-height: 100%;
+}
+
 body {
 	background: url('../assets/images/stripes.svg') no-repeat fixed right top;
 	background-size: 50%;
+	font-family: "sofia-pro-soft";
+	font-size: 18px;
 	line-height: 1.25;
+	color: #282A2D;
+	width: 100%;
+	margin-bottom: 60px;
+}
+
+.bg-black {
+	background-color: #282A2D;
+}
+
+.bg-red {
+	background-color: #CD5D51;
+}
+
+.bg-white {
+	background-color: #ffffff;
 }
 
 .container {
-	
+	padding-left: 5%;
+	padding-right: 5%;
 }
 
 .med-div {
@@ -72,7 +95,6 @@ body {
 	padding: 0;
 	height: 50px;
 	width: 100%;
-	background-color: #CD5D51;
 }
 
 /* Header */
@@ -94,7 +116,6 @@ body {
 	font-size: 144px;
 	line-height: 1;
 	color: #CD5D51;
-	margin-left: 10%;
 }
 
 .header-link a {
@@ -102,7 +123,7 @@ body {
 	color: #34727E;
 }
 
-.header-link a:hover {
+.header-link a:hover, #get-new-fact span:hover {
 	opacity: 0.8;
 	transition: opacity 0.15s linear;
 }
@@ -110,13 +131,13 @@ body {
 /* Content */
 
 .content {
-	width: 100%;
 	background: white;
 }
 
 .content p {
 	font-family: "sofia-pro-soft";
-	font-size: 20px;	
+	font-size: 20px;
+	text-align: left;	
 	color: #CD5D51;
 }
 
@@ -126,7 +147,6 @@ body {
 	font-size: 96px;
 	text-align: right;
 	color: #282A2D;
-	width: 100%;
 	margin-bottom: 25px;
 }
 
@@ -136,9 +156,18 @@ body {
 	font-size: 72px;
 	text-align: left;
 	color: #282A2D;
-	width: 100%;
 	margin-bottom: 25px;
-	margin-left: 5%;
+	margin-top: 15px;
+}
+
+.content-subheader-right p {
+	font-family: "sofia-pro";
+	font-weight: 700;
+	font-size: 72px;
+	text-align: right;
+	color: #282A2D;
+	margin-bottom: 25px;
+	margin-top: 15px;
 }
 
 /* Project */
@@ -147,7 +176,7 @@ body {
 	width: 80%;
 	height: 200px;
 	border-radius: 10px;
-    border: 1px solid #eee;	
+    border: 2px solid #eee;	
 	background-color: white;
 	margin-top: 25px;
 }
@@ -168,59 +197,229 @@ body {
 	border-left: 8px solid #CD5D51;
 }
 
-
-
-
-
-
-	
-/* Icons for github and linkedIn */
-#icons {
-	display: block;
-	margin-top: 10px;
-	width: 100%;
-}
-#icons img {
-	display: inline-block;
-	max-width: 60px;
-}
-#icons {
-	display: flex;
-  	justify-content: center;
-  	align-items: center;
+.project-header p {
+	font-family: "sofia-pro";
+	font-weight: 700;
+	font-size: 24px;
+	text-align: left;
+	color: #282A2D;
+	margin-bottom: 10px;
+	padding-top: 15px;
 }
 
-/* Randomly generated fact section */
-#fun-fact {
-	margin-top: 20px;
-	margin-left: auto;
-	margin-right: auto;
-	display: block;
-	height: 100px;
+.project-description p {
+	font-size: 18px;
+	color: #282A2D;
+	padding-bottom: 15px;
 }
-#fun-fact p {
+
+/* Experience */
+
+.exp-title {
+	font-family: "sofia-pro";
+	font-weight: 700;
+	font-size: 24px;
+	text-align: left;
+	color: #282A2D;
+}
+
+.exp-date {
+	font-family: "sofia-pro";
+	font-size: 24px;
+	text-align: right;
+	color: #282A2D;
+}
+
+.exp-company {
+	font-style: italic;
+	padding-bottom: 10px;
+}
+
+.exp-div {
+	border-radius: 10px;
+    border: 2px solid #eee;	
+}
+
+.exp-resume {
+	font-family: "sofia-pro";
+	font-weight: 700;
+	font-size: 24px;
 	text-align: center;
-	margin-bottom: 0px;
-	max-width: 80%;
-}
-#random-fun-fact {
-	font-family: "Open Sans Regular";
-	font-weight: 800;
-	color: #ffffff;
-}
-#fun-fact span {
-	font-family: "Open Sans Light";
-	font-weight: 200;
-	color: #ffffff;
-}
-#get-new-fact {
-	font-family: "Open Sans Light";
-	font-weight: 200;
-	font-size: small;
-	color: #dadada;
+	color: #282A2D;
+	padding-top: 10px;
+	padding-bottom: 15px;
 }
 
-/* ANIMATIONS - all credit to Alex Gurevich at fabriceleven.com */
+.circle {
+  height: 15px;
+  width: 15px;
+  background-color: #282A2D;
+  border-radius: 50%;
+  margin: 5px auto 5px auto;
+}
+
+.line {
+	height: 50px;
+	width: 1px;
+	border: 3px solid #CD8E50;
+	border-radius: 5px;
+	margin: auto;
+}
+
+/* Other */
+
+.other-box {
+	width: 80%;
+	height: 250px;
+	border-radius: 10px;
+	border: 2px solid #eee;
+	margin-top: 25px;
+}
+
+.other-box img, .fun-fact img {
+	position: absolute;
+	left: 0;
+	right: 0;
+	top: -25px;
+	width: 70px;
+}
+
+.fun-fact {
+	width: 60%;
+	height: 140px;
+	border-radius: 10px;
+	border: 2px solid #eee;
+	margin-top: 25px;
+}
+
+.fun-fact p {
+	color: #282A2D;
+}
+
+#get-new-fact {
+	font-family: "sofia-pro";
+	font-weight: 500;
+	font-size: 18px;
+}
+
+#get-new-fact span {
+	color: #34727E;
+}
+
+#random-fun-fact {
+	font-family: "sofia-pro";
+	font-weight: 700;
+	font-size: 20px;
+}
+
+#fact {
+	font-family: "sofia-pro-soft";
+	font-weight: 500;
+	font-size: 20px;
+}
+
+
+.pin {
+	height: 40px; /* Value here (roughly) should be height of pin-0.svg (-) the top: -XXpx; value from .other-box img. */
+}
+
+/* Footer */
+
+.footer {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 60px;
+  line-height: 60px;
+  background-color: #f5f5f5;
+}	
+
+.footer-links {
+	position: relative;
+	height: 60px;
+}
+
+.footer svg {
+	display: inline-block;
+	position: absolute;
+	top: 50%;
+	-webkit-transform: translateY(-50%);
+  	-ms-transform: translateY(-50%);
+  	transform: translateY(-50%);
+  	left: 0;
+  	right: 0;
+	width: 100%;
+	margin: auto;
+	color: #282A2D;
+}
+
+.footer svg:hover {
+	opacity: 0.8;
+	transition: opacity 0.15s linear;
+}
+
+.footer-block-1 {
+	width: 100%;
+	height: 20px;
+	background-color: #CD5D51;
+	overflow: hidden;
+}
+
+.footer-block-1:after {
+	height: 20px;
+  	width: 100%;
+  	position: absolute;
+  	top: -30px;
+  	background-color: #CD8E50;
+  	content: "";
+  	transform: rotate(-60deg);
+  	transform-origin: top right;
+}
+
+.footer-block-2 {
+	width: 100%;
+	height: 20px;
+	background-color: #CD8E50;
+	overflow: hidden;
+}
+
+.footer-block-2:after {
+	height: 20px;
+  	width: 100%;
+  	position: absolute;
+  	top: -30px;
+  	background-color: #35727E;
+  	content: "";
+  	transform: rotate(-60deg);
+  	transform-origin: top right;
+}
+
+.footer-block-3 {
+	width: 100%;
+	height: 20px;
+	background-color: #35727E;
+	overflow: hidden;
+}
+
+.footer-block-3:after {
+	height: 20px;
+  	width: 100%;
+  	position: absolute;
+  	top: -30px;
+  	background-color: #3C9B51;
+  	content: "";
+  	transform: rotate(-60deg);
+  	transform-origin: top right;
+}
+
+.footer-block-4 {
+	width: 100%;
+	height: 20px;
+	background-color: #3C9B51;
+	overflow: hidden;
+}
+
+/* All credit to Alex Gurevich for the animation. (fabriceleven.com) */
 @-webkit-keyframes fadeIn { from { opacity:0; } to { opacity:1; } }
 @-moz-keyframes fadeIn { from { opacity:0; } to { opacity:1; } }
 @keyframes fadeIn { from { opacity:0; } to { opacity:1; } }
@@ -245,3 +444,12 @@ body {
 -moz-animation-delay: .7s;
 animation-delay: .7s;
 }
+
+
+/* Debug code */
+ 
+/** {
+    background: #000 !important;
+    color: #0f0 !important;
+    outline: solid #f00 1px !important;
+}*/
