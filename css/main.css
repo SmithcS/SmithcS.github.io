@@ -63,8 +63,8 @@ html {
 }
 
 body {
-	background: url('../assets/images/stripes.svg') no-repeat fixed right top;
-	background-size: 50%;
+	/* background: url('../assets/images/stripes.svg') no-repeat fixed right top;
+	background-size: 50%; */
 	font-family: "sofia-pro-soft";
 	font-size: 18px;
 	line-height: 1.25;
@@ -116,6 +116,10 @@ body {
 	font-size: 144px;
 	line-height: 1;
 	color: #CD5D51;
+}
+
+.header-text {
+	margin-top: 75px;
 }
 
 .header-link a {
