@@ -1,159 +1,436 @@
-@font-face {
-    font-family: "Open Sans Light";
-    src: url(OpenSans-Light.ttf);
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+/*
+REMEMBER TO REMOVE THE RESET ELEMENTS THAT I DO NEED
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
 }
-@font-face {
-	font-family: "Open Sans Regular";
-	src: url(OpenSans-Regular.ttf);
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
 }
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+/* 
+Start my CSS
+*/
 
 /* General */
-body {
-	font-family: "Open Sans Light";
-	font-weight: 200;
-	height: 100%;
-	color: #454545;
+
+html {
+  position: relative;
+  min-height: 100%;
 }
 
-h1 {
-	font-family: 'Lato', sans-serif;
-	margin-left: auto;
-	margin-right: auto;
-	text-align: center;
-	color: #ffffff;
+body {
+	background: url('../assets/images/stripes.svg') no-repeat fixed right top;
+	background-size: 50%;
+	font-family: "sofia-pro-soft";
+	font-size: 18px;
+	line-height: 1.25;
+	color: #282A2D;
+	width: 100%;
+	margin-bottom: 60px;
+}
+
+.bg-black {
+	background-color: #282A2D;
+}
+
+.bg-red {
+	background-color: #CD5D51;
+}
+
+.bg-white {
+	background-color: #ffffff;
 }
 
 .container {
-	display: flex;
-  	justify-content: center;
-  	align-items: center;
-  	z-index: 9990;
+	padding-left: 5%;
+	padding-right: 5%;
 }
+
+.med-div {
+	display: block;
+	padding: 0;
+	height: 50px;
+	width: 100%;
+}
+
+/* Header */
+
+.header {
+	margin-top: 100px;
+	margin-bottom: 100px;
+}
+
+.header p {
+	font-family: "sofia-pro-soft";
+	font-size: 22px;
+	color: #282A2D;
+}
+
+.huge-text p {
+	font-family: "sofia-pro";
+	font-weight: 700;
+	font-size: 144px;
+	line-height: 1;
+	color: #CD5D51;
+}
+
+.header-link a {
+	text-decoration: none;
+	color: #34727E;
+}
+
+.header-link a:hover, #get-new-fact span:hover {
+	opacity: 0.8;
+	transition: opacity 0.15s linear;
+}
+
+/* Content */
 
 .content {
-	top: 150px;
-	background: rgba(231,76,60,0.9);
-	height: 35vmax;
-	width: 60%;
-	border-radius: 5px;
- 	box-shadow: 4px 4px 7px rgba(40, 40, 40, 0.2);
- 	z-index: 9990;
+	background: white;
 }
 
-/* Stripes */
-.top-panel {
-	position: relative;
+.content p {
+	font-family: "sofia-pro-soft";
+	font-size: 20px;
+	text-align: left;	
+	color: #CD5D51;
 }
 
-.bottom-panel {
-	position: relative;
-	right: 0px;
-	width: 100%;
+.content-header-right p {
+	font-family: "sofia-pro";
+	font-weight: 700;
+	font-size: 96px;
+	text-align: right;
+	color: #282A2D;
+	margin-bottom: 25px;
+}
+
+.content-subheader-left p {
+	font-family: "sofia-pro";
+	font-weight: 700;
+	font-size: 72px;
+	text-align: left;
+	color: #282A2D;
+	margin-bottom: 25px;
+	margin-top: 15px;
+}
+
+.content-subheader-right p {
+	font-family: "sofia-pro";
+	font-weight: 700;
+	font-size: 72px;
+	text-align: right;
+	color: #282A2D;
+	margin-bottom: 25px;
+	margin-top: 15px;
+}
+
+/* Project */
+
+.project-box {
+	width: 80%;
+	height: 200px;
+	border-radius: 10px;
+    border: 2px solid #eee;	
+	background-color: white;
+	margin-top: 25px;
+}
+
+.project-box:nth-of-type(1n) {
+	border-left: 8px solid #CD8E50;
+}
+	
+.project-box:nth-of-type(2n) {
+	border-left: 8px solid #35727E;
+}
+
+.project-box:nth-of-type(3n) {
+	border-left: 8px solid #3C9B51;
+}
+
+.project-box:nth-of-type(4n) {
+	border-left: 8px solid #CD5D51;
+}
+
+.project-header p {
+	font-family: "sofia-pro";
+	font-weight: 700;
+	font-size: 24px;
+	text-align: left;
+	color: #282A2D;
+	margin-bottom: 10px;
+	padding-top: 15px;
+}
+
+.project-description p {
+	font-size: 18px;
+	color: #282A2D;
+	padding-bottom: 15px;
+}
+
+/* Experience */
+
+.exp-title {
+	font-family: "sofia-pro";
+	font-weight: 700;
+	font-size: 24px;
+	text-align: left;
+	color: #282A2D;
+}
+
+.exp-date {
+	font-family: "sofia-pro";
+	font-size: 24px;
+	text-align: right;
+	color: #282A2D;
+}
+
+.exp-company {
+	font-style: italic;
+	padding-bottom: 10px;
+}
+
+.exp-div {
+	border-radius: 10px;
+    border: 2px solid #eee;	
+}
+
+.exp-resume {
+	font-family: "sofia-pro";
+	font-weight: 700;
+	font-size: 24px;
+	text-align: center;
+	color: #282A2D;
+	padding-top: 10px;
+	padding-bottom: 15px;
+}
+
+.circle {
+  height: 15px;
+  width: 15px;
+  background-color: #282A2D;
+  border-radius: 50%;
+  margin: 5px auto 5px auto;
+}
+
+.line {
 	height: 50px;
+	width: 1px;
+	border: 3px solid #CD8E50;
+	border-radius: 5px;
+	margin: auto;
 }
 
-.stripe-left {
-  position: absolute;
-  left: -8%;
-  top: 15px;
-  width: 35%;
-  background-color: #ffffff;
-  height: 50px;
-  transform: skew(0deg) rotate(-35deg);
-  box-shadow: 
-        0px 11px 15px -10px rgba(0,0,0,0.3),
-        0px -11px 15px -10px rgba(0,0,0,0.3); 
-}
-.stripe-right {
-  position: absolute;
-  bottom: 6px;
-  right: -8%;
-  width: 35%;
-  background-color: #ffffff;
-  height: 50px;
-  transform: skew(0deg) rotate(-35deg);
-  box-shadow: 
-        0px 11px 15px -10px rgba(0,0,0,0.3),
-        0px -11px 15px -10px rgba(0,0,0,0.3); 
+/* Other */
+
+.other-box {
+	width: 80%;
+	height: 250px;
+	border-radius: 10px;
+	border: 2px solid #eee;
+	margin-top: 25px;
 }
 
-.lg-div {
-	height: 120px;
-	width: 100%;
+.other-box img, .fun-fact img {
+	position: absolute;
+	left: 0;
+	right: 0;
+	top: -25px;
+	width: 70px;
 }
 
-/* About me section */
-#about-me p {
-	margin-top: 0;
-	margin-left: auto;
-	margin-right: auto;
-	text-align: center;
-	max-width: 60%;
-	height: auto;
+.fun-fact {
+	width: 60%;
+	height: 140px;
+	border-radius: 10px;
+	border: 2px solid #eee;
+	margin-top: 25px;
 }
 
-#bio {
-	color: #ffffff;
+.fun-fact p {
+	color: #282A2D;
 }
 
-/* Icons for github and linkedIn */
-#icons {
-	display: block;
-	margin-top: 10px;
-	width: 100%;
-}
-#icons img {
-	display: inline-block;
-	max-width: 60px;
-}
-#icons {
-	display: flex;
-  	justify-content: center;
-  	align-items: center;
-}
-
-/* Randomly generated fact section */
-#fun-fact {
-	margin-top: 20px;
-	margin-left: auto;
-	margin-right: auto;
-	display: block;
-	height: 100px;
-}
-#fun-fact p {
-	text-align: center;
-	margin-bottom: 0px;
-	max-width: 80%;
-}
-#random-fun-fact {
-	font-family: "Open Sans Regular";
-	font-weight: 800;
-	color: #ffffff;
-}
-#fun-fact span {
-	font-family: "Open Sans Light";
-	font-weight: 200;
-	color: #ffffff;
-}
 #get-new-fact {
-	font-family: "Open Sans Light";
-	font-weight: 200;
-	font-size: small;
-	color: #dadada;
+	font-family: "sofia-pro";
+	font-weight: 500;
+	font-size: 18px;
 }
 
-/* ANIMATIONS - all credit to Alex Gurevich at fabriceleven.com */
+#get-new-fact span {
+	color: #34727E;
+}
+
+#random-fun-fact {
+	font-family: "sofia-pro";
+	font-weight: 700;
+	font-size: 20px;
+}
+
+#fact {
+	font-family: "sofia-pro-soft";
+	font-weight: 500;
+	font-size: 20px;
+}
+
+
+.pin {
+	height: 40px; /* Value here (roughly) should be height of pin-0.svg (-) the top: -XXpx; value from .other-box img. */
+}
+
+/* Footer */
+
+.footer {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 60px;
+  line-height: 60px;
+  background-color: #f5f5f5;
+}	
+
+.footer-links {
+	position: relative;
+	height: 60px;
+}
+
+.footer svg {
+	display: inline-block;
+	position: absolute;
+	top: 50%;
+	-webkit-transform: translateY(-50%);
+  	-ms-transform: translateY(-50%);
+  	transform: translateY(-50%);
+  	left: 0;
+  	right: 0;
+	width: 100%;
+	margin: auto;
+	color: #282A2D;
+}
+
+.footer svg:hover {
+	opacity: 0.8;
+	transition: opacity 0.15s linear;
+}
+
+.footer-block-1 {
+	width: 100%;
+	height: 20px;
+	background-color: #CD5D51;
+	overflow: hidden;
+}
+
+.footer-block-1:after {
+	height: 20px;
+  	width: 100%;
+  	position: absolute;
+  	top: -30px;
+  	background-color: #CD8E50;
+  	content: "";
+  	transform: rotate(-60deg);
+  	transform-origin: top right;
+}
+
+.footer-block-2 {
+	width: 100%;
+	height: 20px;
+	background-color: #CD8E50;
+	overflow: hidden;
+}
+
+.footer-block-2:after {
+	height: 20px;
+  	width: 100%;
+  	position: absolute;
+  	top: -30px;
+  	background-color: #35727E;
+  	content: "";
+  	transform: rotate(-60deg);
+  	transform-origin: top right;
+}
+
+.footer-block-3 {
+	width: 100%;
+	height: 20px;
+	background-color: #35727E;
+	overflow: hidden;
+}
+
+.footer-block-3:after {
+	height: 20px;
+  	width: 100%;
+  	position: absolute;
+  	top: -30px;
+  	background-color: #3C9B51;
+  	content: "";
+  	transform: rotate(-60deg);
+  	transform-origin: top right;
+}
+
+.footer-block-4 {
+	width: 100%;
+	height: 20px;
+	background-color: #3C9B51;
+	overflow: hidden;
+}
+
+/* All credit to Alex Gurevich for the animation. (fabriceleven.com) */
 @-webkit-keyframes fadeIn { from { opacity:0; } to { opacity:1; } }
 @-moz-keyframes fadeIn { from { opacity:0; } to { opacity:1; } }
 @keyframes fadeIn { from { opacity:0; } to { opacity:1; } }
  
 .fade-in {
-	opacity:0;  /* make things invisible upon start */
-	-webkit-animation:fadeIn ease-in 1;  /* call our keyframe named fadeIn, use animattion ease-in and repeat it only 1 time */
+	opacity:0; 
+	-webkit-animation:fadeIn ease-in 1;  
 	-moz-animation:fadeIn ease-in 1;
 	animation:fadeIn ease-in 1;
  
-	-webkit-animation-fill-mode:forwards;  /* this makes sure that after animation is done we remain at the last keyframe value (opacity: 1)*/
+	-webkit-animation-fill-mode:forwards;
 	-moz-animation-fill-mode:forwards;
 	animation-fill-mode:forwards;
  
@@ -167,3 +444,12 @@ h1 {
 -moz-animation-delay: .7s;
 animation-delay: .7s;
 }
+
+
+/* Debug code */
+ 
+/** {
+    background: #000 !important;
+    color: #0f0 !important;
+    outline: solid #f00 1px !important;
+}*/
