@@ -1,0 +1,30 @@
+body {
+	background: white;	
+}
+
+.project-title {
+	margin-top: 50px;
+	margin-bottom: 30px;
+}
+
+.project-title p {
+	font-family: "sofia-pro";
+	font-weight: 700;
+	font-size: 122px;
+	line-height: 1;
+	color: #CD5D51;
+}
+
+.project-content {
+	padding-top: 50px;
+	padding-bottom: 50px;
+}
+
+.project-content p {
+	font-family: "sofia-pro-soft";
+	font-size: 20px;
+	line-height: 1.5;
+	text-align: left;
+	padding-top: 5px;
+	padding-bottom: 5px;	
+}

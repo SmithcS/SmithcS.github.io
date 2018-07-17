@@ -8,6 +8,8 @@
    		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
    		<!-- Using Bootstrap for grid & utility. (https://getbootstrap.com/) -->
 		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">	
+		<!-- Using Google Material Icons for icons. (https://material.io/tools/icons/) -->
+		<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 		<link rel="stylesheet" type="text/css" href="css/main.css">
 		<!-- Using Adobe Typekit for fonts. (https://typekit.com/) -->
 		<link rel="stylesheet" href="https://use.typekit.net/yww3eaa.css">
@@ -17,13 +19,16 @@
 
 	<body>
 
+
 		<div class="container">
 			<div class="row header">
 				<div class="col-md-6 huge-text">
-					<p> Hi, I'm Smith.</p>
+					<p>Hi, I'm Smith.
 				</div>
 				<div class="col-md-6">
-					<p>I’m current student and senior at <span class="header-link"><a href="http://www.psu.edu/">Penn State University</a></span> studying <span class="header-link"><a href="http://www.eecs.psu.edu/">Computer Engineering</a></span>. I’m a people person, leader, and maker with experience in development and UX design. </p>
+					<div class="header-text"> 
+						<p>I’m current student and senior at <span class="header-link"><a href="http://www.psu.edu/">Penn State University</a></span> studying <span class="header-link"><a href="http://www.eecs.psu.edu/">Computer Engineering</a></span>. I’m a people person, leader, and maker with experience in development and UX design. </p>
+					</div>
 				</div>
 			</div>
 
@@ -49,26 +54,95 @@
 				</div>
 			</div>
 			<div class="row justify-content-around">
-				<div class="col-md-5 project-box ">
+				<div class="col-md-5 project-box d-block">
 					<div class="row">
-						<div class="col-md-12 project-header">
-							<p>Test Header</p>
+						<div class="col-md-3 project-graphic"></div>
+						<div class="col-md-9">
+							<div class="row">
+								<div class="col-md-12 project-header">
+									<p>Amazon Affiliate Experiment</p>
+								</div>
+								<div class="col-md-12 project-description">
+									<p>This is a test description for my card.</p>
+								</div>
+							</div>
+							<div class="row">
+								<div class="project-more d-flex justify-content-center align-items-center">
+									<div class="icon-circle d-flex justify-content-center align-items-center">
+										<i class="material-icons md-48">arrow_right_alt</i>
+									</div>
+								</div>
+							</div>
 						</div>
 					</div>
+				</div>
+				<div class="col-md-5 project-box d-block">
 					<div class="row">
-						<div class="col-md-12 project-description">
-							<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+						<div class="col-md-3 project-graphic"></div>
+						<div class="col-md-9">
+							<div class="row">
+								<div class="col-md-12 project-header">
+									<p>HackPSU Website</p>
+								</div>
+								<div class="col-md-12 project-description">
+									<p>This is a test description for my card.</p>
+								</div>
+							</div>
+							<div class="row">
+								<div class="project-more d-flex justify-content-center align-items-center">
+									<a href="project.html">
+									<div class="icon-circle d-flex justify-content-center align-items-center">
+										<i class="material-icons md-48">arrow_right_alt</i>
+									</div>
+									</a>
+								</div>
+							</div>
 						</div>
 					</div>
 				</div>
-				<div class="col-md-5 project-box">
-					
+				<div class="col-md-5 project-box d-block">
+					<div class="row">
+						<div class="col-md-3 project-graphic"></div>
+						<div class="col-md-9">
+							<div class="row">
+								<div class="col-md-12 project-header">
+									<p>State of State</p>
+								</div>
+								<div class="col-md-12 project-description">
+									<p>This is a test description for my card.</p>
+								</div>
+							</div>
+							<div class="row">
+								<div class="project-more d-flex justify-content-center align-items-center">
+									<div class="icon-circle d-flex justify-content-center align-items-center">
+										<i class="material-icons md-48">arrow_right_alt</i>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
 				</div>
-				<div class="col-md-5 project-box">
-
-				</div>
-				<div class="col-md-5 project-box">
-					
+				<div class="col-md-5 project-box d-block">
+					<div class="row">
+						<div class="col-md-3 project-graphic"></div>
+						<div class="col-md-9">
+							<div class="row">
+								<div class="col-md-12 project-header">
+									<p>SVG Animations</p>
+								</div>
+								<div class="col-md-12 project-description">
+									<p>This is a test description for my card.</p>
+								</div>
+							</div>
+							<div class="row">
+								<div class="project-more d-flex justify-content-center align-items-center">
+									<div class="icon-circle d-flex justify-content-center align-items-center">
+										<i class="material-icons md-48">arrow_right_alt</i>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
 				</div>
 			</div>
 
@@ -78,31 +152,48 @@
 				</div>
 			</div>
 
-			<div class="row justify-content-between exp-div">
-				<div class="col-md-6 exp-title">DevOps Intern</div>
-				<div class="col-md-6 exp-date">Summer 2018</div>
-				<div class="col-md-12 exp-company">Blackboard</div>
+			<div class="row exp-div">
+				<div class="col-md-6">
+					<div class="row exp-title">DevOps Intern</div>
+					<div class="row exp-company">Blackboard</div>
+				</div>
+				<div class="col-md-6">
+					<div class="d-flex justify-content-end align-items-center exp-date">
+						<div class="p-2">Summer 2018</div>
+					</div>
+				</div>
 			</div>
 
 			<div class="circle"></div>
 			<div class="line"></div>
 			<div class="circle"></div>
 			
-			<div class="row justify-content-between exp-div">
-				<div class="col-md-6 exp-title">Software Engineering Intern</div>
-				<div class="col-md-6 exp-date">Summer 2017</div>
-				<div class="col-md-12 exp-company">Vanguard</div>
+			<div class="row exp-div">
+				<div class="col-md-6">
+					<div class="row exp-title">Software Engineering Intern</div>
+					<div class="row exp-company">Vanguard</div>
+				</div>
+				<div class="col-md-6">
+					<div class="d-flex justify-content-end align-items-center exp-date">
+						<div class="p-2">Summer 2017</div>
+					</div>
+				</div>
 			</div>
-
 
 			<div class="circle"></div>
 			<div class="line"></div>
 			<div class="circle"></div>
 
-			<div class="row justify-content-between exp-div">
-				<div class="col-md-6 exp-title">Embedded Software Engineer Co-op</div>
-				<div class="col-md-6 exp-date">May 2016 - Dec 2016</div>
-				<div class="col-md-12 exp-company">Rockwell Automation</div>
+			<div class="row exp-div">
+				<div class="col-md-6">
+					<div class="row exp-title">Embedded Software Engineer Co-op</div>
+					<div class="row exp-company">Rockwell Automation</div>
+				</div>
+				<div class="col-md-6">
+					<div class="d-flex justify-content-end align-items-center exp-date">
+						<div class="p-2">May 2016 - Dec 2016</div>
+					</div>
+				</div>
 			</div>
 
 			<div class="circle"></div>
@@ -127,8 +218,12 @@
 						</div>
 					</div>
 					<div class="row">
-						<div class="col-md-6 exp-title">Watercolor</div>
-
+						<div class="col-md-6 other-title">Watercolor</div>
+					</div>
+					<div class="row">
+						<div class="col-md-12 project-description">
+							<p>Check out some of the watercolor I do! Selected sketches, works, and experiments in watercolor.</p>
+						</div>
 					</div>
 				</div>
 				<div class="col-md-5 other-box">
@@ -138,7 +233,7 @@
 						</div>
 					</div>
 					<div class="row">
-						<div class="col-md-6 exp-title">Talks</div>
+						<div class="col-md-6 other-title">Before I Die Wall</div>
 
 					</div>
 				</div>

@@ -81,13 +81,49 @@ body {
 	background-color: #CD5D51;
 }
 
+.bg-blue {
+	background-color: #35727E;
+}
+
+.bg-lgray {
+	background-color: #f5f5f5;
+}
+
 .bg-white {
 	background-color: #ffffff;
+}
+
+.red {
+	color: #CD5D51;
+}
+
+.blue {
+	color: #35727E;
+}
+
+.orange {
+	color: #CD8E50;
+}
+
+.green {
+	color: #3C9B51;
+}
+
+a:hover {
+	opacity: 0.7;
+	transition: opacity 0.15s linear;
 }
 
 .container {
 	padding-left: 5%;
 	padding-right: 5%;
+}
+
+.small-div {
+	display: block;
+	padding: 0;
+	height: 10px;
+	width: 100%;
 }
 
 .med-div {
@@ -96,6 +132,26 @@ body {
 	height: 50px;
 	width: 100%;
 }
+
+/* Nav */
+
+.navbar {
+	font-family: "sofia-pro";
+	font-weight: 700;
+}
+
+.navbar-brand {
+	font-size: 1.35rem;
+}
+
+.navbar-light .navbar-nav .nav-link {
+	color: #35727E;
+}
+
+.navbar-light .navbar-nav .active>.nav-link {
+	color: #35727E;
+}
+
 
 /* Header */
 
@@ -118,14 +174,20 @@ body {
 	color: #CD5D51;
 }
 
+.header-text {
+	background-color: rgba(250, 250, 250, 0.8);
+	border: 5px rgba(250, 250, 250, 0.8);
+	border-radius: 5px;
+	margin-top: 15px;
+}
+
+.header-text p {
+	padding: 10px;
+}
+
 .header-link a {
 	text-decoration: none;
 	color: #34727E;
-}
-
-.header-link a:hover, #get-new-fact span:hover {
-	opacity: 0.8;
-	transition: opacity 0.15s linear;
 }
 
 /* Content */
@@ -174,7 +236,7 @@ body {
 
 .project-box {
 	width: 80%;
-	height: 200px;
+	height: 175;
 	border-radius: 10px;
     border: 2px solid #eee;	
 	background-color: white;
@@ -203,14 +265,56 @@ body {
 	font-size: 24px;
 	text-align: left;
 	color: #282A2D;
-	margin-bottom: 10px;
-	padding-top: 15px;
+	margin-bottom: 5px;
+	padding-top: 5px;
 }
 
 .project-description p {
 	font-size: 18px;
 	color: #282A2D;
 	padding-bottom: 15px;
+}
+
+.project-more {
+	height: 37.5px;
+	width: 100%;
+	position: absolute;
+	bottom: 0px;
+	left: 0px;
+	border-bottom: 2px solid rgba(255,255,255,0);
+	border-radius: 0px 0px 8px 3px; 
+	overflow: visible;
+	background-color: #f5f5f5;
+}
+
+.project-more a {
+	text-decoration: none;
+	color: #282A2D;
+}
+
+.project-more a:hover {
+	opacity: 1;
+}
+
+.icon-circle {
+  height: 48px;
+  width: 48px;
+  background-color: #E0E0E0;
+  border-radius: 50%;
+  margin-bottom:  37.5px;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+}
+
+.icon-circle:hover {
+	background-color: #BDBDBD;
+	transition: background-color 0.15s linear;
+}
+
+
+.project-graphic {
+	height: 169px;
+	background: url('../assets/placeholder-2.svg') no-repeat center center;
+	background-size: cover;
 }
 
 /* Experience */
@@ -220,10 +324,16 @@ body {
 	font-weight: 700;
 	font-size: 24px;
 	text-align: left;
+	padding-top: 10px;
+	padding-left: 25px;
 	color: #282A2D;
 }
 
 .exp-date {
+	height: 100%;
+}
+
+.exp-date div {
 	font-family: "sofia-pro";
 	font-size: 24px;
 	text-align: right;
@@ -232,6 +342,7 @@ body {
 
 .exp-company {
 	font-style: italic;
+	padding-left: 25px;
 	padding-bottom: 10px;
 }
 
@@ -255,7 +366,7 @@ body {
   width: 15px;
   background-color: #282A2D;
   border-radius: 50%;
-  margin: 5px auto 5px auto;
+  margin: 4px auto 4px auto;
 }
 
 .line {
@@ -284,6 +395,15 @@ body {
 	width: 70px;
 }
 
+.other-title {
+	font-family: "sofia-pro";
+	font-weight: 700;
+	font-size: 24px;
+	text-align: left;
+	color: #282A2D;
+	padding-bottom: 10px;
+}
+
 .fun-fact {
 	width: 60%;
 	height: 140px;
@@ -304,6 +424,11 @@ body {
 
 #get-new-fact span {
 	color: #34727E;
+}
+
+#get-new-fact span:hover {
+	opacity: 0.8;
+	transition: opacity 0.15s linear;
 }
 
 #random-fun-fact {
@@ -446,10 +571,26 @@ animation-delay: .7s;
 }
 
 
+/* Google material-icon-specific css */
+
+/* Rules for sizing the icon. */
+.material-icons.md-18 { font-size: 18px; }
+.material-icons.md-24 { font-size: 24px; }
+.material-icons.md-36 { font-size: 36px; }
+.material-icons.md-48 { font-size: 48px; }
+
+/* Rules for using icons as black on a light background. */
+.material-icons.md-dark { color: rgba(0, 0, 0, 0.54); }
+.material-icons.md-dark.md-inactive { color: rgba(0, 0, 0, 0.26); }
+
+/* Rules for using icons as white on a dark background. */
+.material-icons.md-light { color: rgba(255, 255, 255, 1); }
+.material-icons.md-light.md-inactive { color: rgba(255, 255, 255, 0.3); }
+
 /* Debug code */
  
-/** {
-    background: #000 !important;
-    color: #0f0 !important;
-    outline: solid #f00 1px !important;
-}*/
+/* * {
+	background: #000 !important;
+	color: #0f0 !important;
+	outline: solid #f00 1px !important;
+} */
