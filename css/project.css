@@ -1,5 +1,5 @@
 body {
-	background: white;	
+	background: white;
 }
 
 .project-title {
@@ -27,4 +27,18 @@ body {
 	text-align: left;
 	padding-top: 5px;
 	padding-bottom: 5px;	
+}
+
+/* Before I Die Project Page */
+
+.before-i-die-title {
+	width: 60%;
+}
+
+.before-i-die-column {
+	width: 40%;
+}
+
+.before-i-die-graphic {
+	padding: 20px;
 }

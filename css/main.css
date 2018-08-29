@@ -63,14 +63,17 @@ html {
 }
 
 body {
-	background: url('../assets/images/stripes.svg') no-repeat fixed right top;
-	background-size: 50%;
 	font-family: "sofia-pro-soft";
 	font-size: 18px;
 	line-height: 1.25;
 	color: #282A2D;
 	width: 100%;
 	margin-bottom: 60px;
+}
+
+/* Fixeds page width problem on mobile devices due to large words. */
+p {
+	word-break: break-word;
 }
 
 .bg-black {
@@ -155,9 +158,25 @@ a:hover {
 
 /* Header */
 
+.bg {
+
+}
+
 .header {
-	margin-top: 100px;
-	margin-bottom: 100px;
+	background: url('../assets/images/stripes2.svg') no-repeat fixed right top;
+	background-size: 70%;
+}
+
+/* Removes striped background for mobile and smaller devices. */
+@media screen and (max-width: 576px) {
+	.header {
+		background: #ffffff;
+	}
+}
+
+.header .row {
+	padding-top: 100px;
+	padding-bottom: 100px;
 }
 
 .header p {
@@ -172,6 +191,13 @@ a:hover {
 	font-size: 144px;
 	line-height: 1;
 	color: #CD5D51;
+	white-space: nowrap;
+}
+
+@media screen and (max-width: 768px) {
+	.huge-text p {
+		font-size: 96px;
+	}
 }
 
 .header-text {
@@ -232,6 +258,22 @@ a:hover {
 	margin-top: 15px;
 }
 
+@media screen and (max-width: 576px) {
+	.content p {
+		line-height: 1.45em; 
+	}
+	.content-header-right p {
+		font-size: 72px;
+		text-align: center;
+	}
+	.content-subheader-right p {
+		text-align: center;
+	}
+	.content-subheader-left p {
+		text-align: center;
+	}
+}
+
 /* Project */
 
 .project-box {
@@ -287,6 +329,23 @@ a:hover {
 	background-color: #f5f5f5;
 }
 
+.button-sm-screen {
+	
+}
+
+@media screen and (max-width: 576px) {
+	.project-header p {
+		font-size: 32px;
+	}
+	.project-description p {
+		display: none;
+	}
+	.project-more {
+		display: none;
+		height: 0;
+	}
+}
+
 .project-more a {
 	text-decoration: none;
 	color: #282A2D;
@@ -310,11 +369,27 @@ a:hover {
 	transition: background-color 0.15s linear;
 }
 
-
 .project-graphic {
 	height: 169px;
 	background: url('../assets/placeholder-2.svg') no-repeat center center;
 	background-size: cover;
+}
+
+.project-graphic a {
+	color: inherit;
+	display: none;
+}
+
+/* Resize icon circle and set visible for mobile and smaller devices. */
+@media screen and (max-width: 578px) {
+	.icon-circle {
+		height: 72px;
+		width: 72px;
+		margin-bottom: 0px;
+	}
+	.project-graphic a {
+		display: inline-block;
+	}
 }
 
 /* Experience */
@@ -578,6 +653,7 @@ animation-delay: .7s;
 .material-icons.md-24 { font-size: 24px; }
 .material-icons.md-36 { font-size: 36px; }
 .material-icons.md-48 { font-size: 48px; }
+.material-icons.md-72 { font-size: 72px; }
 
 /* Rules for using icons as black on a light background. */
 .material-icons.md-dark { color: rgba(0, 0, 0, 0.54); }
