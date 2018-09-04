@@ -268,9 +268,11 @@ a:hover {
 	}
 	.content-subheader-right p {
 		text-align: center;
+		font-size: 48px;
 	}
 	.content-subheader-left p {
 		text-align: center;
+		font-size: 48px;
 	}
 }
 
