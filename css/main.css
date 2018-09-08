@@ -235,6 +235,7 @@ a:hover {
 	font-size: 96px;
 	text-align: right;
 	color: #282A2D;
+	margin-top: 15px;
 	margin-bottom: 25px;
 }
 
@@ -263,7 +264,7 @@ a:hover {
 		line-height: 1.45em; 
 	}
 	.content-header-right p {
-		font-size: 72px;
+		font-size: 60px;
 		text-align: center;
 	}
 	.content-subheader-right p {
@@ -328,14 +329,10 @@ a:hover {
 	border-bottom: 2px solid rgba(255,255,255,0);
 	border-radius: 0px 0px 8px 3px; 
 	overflow: visible;
-	background-color: #f5f5f5;
+	background: linear-gradient(90deg, #ffffff 13%,#f5f5f5 31%,#f5f5f5 100%);
 }
 
-.button-sm-screen {
-	
-}
-
-@media screen and (max-width: 576px) {
+@media screen and (max-width: 768px) {
 	.project-header p {
 		font-size: 32px;
 	}
@@ -365,7 +362,7 @@ a:hover {
   margin-bottom:  37.5px;
   box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
 }
-
+ope
 .icon-circle:hover {
 	background-color: #BDBDBD;
 	transition: background-color 0.15s linear;
@@ -373,7 +370,22 @@ a:hover {
 
 .project-graphic {
 	height: 169px;
-	background: url('../assets/placeholder-2.svg') no-repeat center center;
+}
+/* Classes for using different card background graphics */
+.pg1 {
+	background: url('../assets/images/card-graphic-2-alt.svg') no-repeat top center;
+	background-size: 100%;
+}
+.pg2 {
+	background: url('../assets/images/card-graphic-9.svg') no-repeat bottom center;
+	background-size: cover;
+}
+.pg3 {
+	background: url('../assets/images/card-graphic-4.svg') no-repeat center left;
+	background-size: cover;
+}
+.pg4 {
+	background: url('../assets/images/card-graphic-6.svg') no-repeat center left;
 	background-size: cover;
 }
 
@@ -383,7 +395,7 @@ a:hover {
 }
 
 /* Resize icon circle and set visible for mobile and smaller devices. */
-@media screen and (max-width: 578px) {
+@media screen and (max-width: 768px) {
 	.icon-circle {
 		height: 72px;
 		width: 72px;
@@ -395,6 +407,11 @@ a:hover {
 }
 
 /* Experience */
+
+.exp-row {
+	width: 90%;
+	margin: auto;
+}
 
 .exp-title {
 	font-family: "sofia-pro";
@@ -419,18 +436,18 @@ a:hover {
 
 .exp-company {
 	font-style: italic;
-	padding-left: 25px;
-	padding-bottom: 10px;
+	padding: 15px 0px 10px 25px;
 }
 
 .exp-div {
+	width: 100%;
 	border-radius: 10px;
     border: 2px solid #eee;	
 }
 
 .exp-resume {
 	font-family: "sofia-pro";
-	font-weight: 700;
+	font-weight: 400;
 	font-size: 24px;
 	text-align: center;
 	color: #282A2D;
@@ -454,6 +471,26 @@ a:hover {
 	margin: auto;
 }
 
+/* Resize experience section when changing to small screens. */
+@media screen and (max-width: 578px) {
+	.exp-row {
+		width: 100%;
+		margin: 0;
+	}
+	.exp-title {
+		padding: 15px;
+	}
+	.exp-company {
+		padding: 0px 15px 0px 15px;
+		font-size: 18px;
+	}
+	.exp-date div {
+		/* Need to override bootstrap p-2 padding. */
+		padding: 15px 0px 15px 0px !important;
+		font-size: 18px;
+	}
+}
+
 /* Other */
 
 .other-box {
@@ -464,29 +501,37 @@ a:hover {
 	margin-top: 25px;
 }
 
-.other-box img, .fun-fact img {
-	position: absolute;
-	left: 0;
-	right: 0;
-	top: -25px;
-	width: 70px;
+@media screen and (max-width: 578px) {
+	.other-box {
+		width: 95%;
+	};
+}
+@media screen and (max-width: 768px) {
+	.other-box {
+		height: auto;	
+	}
 }
 
-.other-title {
+.other-title p {
 	font-family: "sofia-pro";
 	font-weight: 700;
-	font-size: 24px;
+	font-size: 48px;
+	line-height: .9em;
 	text-align: left;
+	padding-right: 0;
 	color: #282A2D;
-	padding-bottom: 10px;
+}
+
+.other-content {
+	padding-bottom: 15px;
 }
 
 .fun-fact {
 	width: 60%;
-	height: 140px;
 	border-radius: 10px;
 	border: 2px solid #eee;
 	margin-top: 25px;
+	padding-bottom: 25px;
 }
 
 .fun-fact p {
@@ -504,6 +549,7 @@ a:hover {
 }
 
 #get-new-fact span:hover {
+	cursor: pointer;
 	opacity: 0.8;
 	transition: opacity 0.15s linear;
 }
@@ -520,9 +566,28 @@ a:hover {
 	font-size: 20px;
 }
 
-
 .pin {
-	height: 40px; /* Value here (roughly) should be height of pin-0.svg (-) the top: -XXpx; value from .other-box img. */
+	/* Value here (roughly) should be height of pin-0.svg (-) the top: -XXpx; value from .other-box img. */
+	height: 40px; 
+}
+
+.pin img {
+	position: absolute;
+	left: 0;
+	right: 0;
+	top: -25px;
+	width: 70px;
+}
+
+@media screen and (max-width: 568px) {
+	.other-title p {
+		font-size: 36px;
+	}
+}
+@media screen and (max-width: 768px) {
+	.other-title p {
+		font-size: 34px;
+	};
 }
 
 /* Footer */
@@ -619,6 +684,23 @@ a:hover {
 	height: 20px;
 	background-color: #3C9B51;
 	overflow: hidden;
+}
+
+
+@media screen and (max-width: 578px) {
+	.fun-fact {
+		width: 95%;
+	}
+	.exp-div {
+		width: 95%;
+		margin: auto;
+	}
+	.exp-resume {
+		width: 95%;
+	}
+	.project-box {
+		width: 95%;
+	}
 }
 
 /* All credit to Alex Gurevich for the animation. (fabriceleven.com) */
