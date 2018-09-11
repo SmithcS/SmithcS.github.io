@@ -63,14 +63,27 @@ html {
 }
 
 body {
+<<<<<<< HEAD
 	/* background: url('../assets/images/stripes.svg') no-repeat fixed right top;
 	background-size: 50%; */
+=======
+>>>>>>> new-website
 	font-family: "sofia-pro-soft";
 	font-size: 18px;
 	line-height: 1.25;
 	color: #282A2D;
 	width: 100%;
 	margin-bottom: 60px;
+}
+
+/* Removing the underline from all links */
+a {
+	text-decoration: none !important;
+}
+
+/* Fixeds page width problem on mobile devices due to large words. */
+p {
+	word-break: break-word;
 }
 
 .bg-black {
@@ -81,13 +94,50 @@ body {
 	background-color: #CD5D51;
 }
 
+.bg-blue {
+	background-color: #35727E;
+}
+
+.bg-lgray {
+	background-color: #f5f5f5;
+}
+
 .bg-white {
 	background-color: #ffffff;
+}
+
+.red {
+	color: #CD5D51;
+}
+
+.blue {
+	color: #35727E;
+}
+
+.orange {
+	color: #CD8E50;
+}
+
+.green {
+	color: #3C9B51;
+}
+
+a:hover {
+	cursor: pointer;
+	opacity: 0.7;
+	transition: opacity 0.15s linear;
 }
 
 .container {
 	padding-left: 5%;
 	padding-right: 5%;
+}
+
+.small-div {
+	display: block;
+	padding: 0;
+	height: 10px;
+	width: 100%;
 }
 
 .med-div {
@@ -97,11 +147,43 @@ body {
 	width: 100%;
 }
 
+/* Nav */
+
+.navbar {
+	font-family: "sofia-pro";
+	font-weight: 700;
+}
+
+.navbar-brand {
+	font-size: 1.35rem;
+}
+
+.navbar-light .navbar-nav .nav-link {
+	color: #35727E;
+}
+
+.navbar-light .navbar-nav .active>.nav-link {
+	color: #35727E;
+}
+
+
 /* Header */
 
 .header {
-	margin-top: 100px;
-	margin-bottom: 100px;
+	background: url('../assets/images/stripes2.svg') no-repeat fixed right top;
+	background-size: 70%;
+}
+
+/* Removes striped background for mobile and smaller devices. */
+@media screen and (max-width: 576px) {
+	.header {
+		background: #ffffff;
+	}
+}
+
+.header .row {
+	padding-top: 100px;
+	padding-bottom: 100px;
 }
 
 .header p {
@@ -116,6 +198,24 @@ body {
 	font-size: 144px;
 	line-height: 1;
 	color: #CD5D51;
+	white-space: nowrap;
+}
+
+@media screen and (max-width: 768px) {
+	.huge-text p {
+		font-size: 96px;
+	}
+}
+
+.header-text {
+	background-color: rgba(250, 250, 250, 0.8);
+	border: 5px rgba(250, 250, 250, 0.8);
+	border-radius: 5px;
+	margin-top: 15px;
+}
+
+.header-text p {
+	padding: 10px;
 }
 
 .header-text {
@@ -125,11 +225,6 @@ body {
 .header-link a {
 	text-decoration: none;
 	color: #34727E;
-}
-
-.header-link a:hover, #get-new-fact span:hover {
-	opacity: 0.8;
-	transition: opacity 0.15s linear;
 }
 
 /* Content */
@@ -151,6 +246,7 @@ body {
 	font-size: 96px;
 	text-align: right;
 	color: #282A2D;
+	margin-top: 15px;
 	margin-bottom: 25px;
 }
 
@@ -174,11 +270,29 @@ body {
 	margin-top: 15px;
 }
 
+@media screen and (max-width: 576px) {
+	.content p {
+		line-height: 1.45em; 
+	}
+	.content-header-right p {
+		font-size: 60px;
+		text-align: center;
+	}
+	.content-subheader-right p {
+		text-align: center;
+		font-size: 48px;
+	}
+	.content-subheader-left p {
+		text-align: center;
+		font-size: 48px;
+	}
+}
+
 /* Project */
 
 .project-box {
 	width: 80%;
-	height: 200px;
+	height: 175;
 	border-radius: 10px;
     border: 2px solid #eee;	
 	background-color: white;
@@ -207,8 +321,8 @@ body {
 	font-size: 24px;
 	text-align: left;
 	color: #282A2D;
-	margin-bottom: 10px;
-	padding-top: 15px;
+	margin-bottom: 5px;
+	padding-top: 5px;
 }
 
 .project-description p {
@@ -217,17 +331,136 @@ body {
 	padding-bottom: 15px;
 }
 
+.project-more {
+	height: 37.5px;
+	width: 100%;
+	position: absolute;
+	bottom: 0px;
+	left: 0px;
+	border-bottom: 2px solid rgba(255,255,255,0);
+	border-radius: 0px 0px 8px 3px; 
+	overflow: visible;
+	background: linear-gradient(90deg, #ffffff 13%,#f5f5f5 31%,#f5f5f5 100%);
+}
+
+@media screen and (max-width: 992px) {
+	.project-header p {
+		font-size: 32px;
+	}
+	.project-description p {
+		display: none;
+	}
+	.project-more {
+		display: none;
+		height: 0;
+	}
+}
+
+.project-more a {
+	text-decoration: none;
+	color: #282A2D;
+}
+
+.project-more a:hover {
+	opacity: 1;
+}
+
+.icon-circle {
+  height: 48px;
+  width: 48px;
+  background-color: #E0E0E0;
+  border-radius: 50%;
+  margin-bottom:  37.5px;
+  margin-right: 20px;
+}
+.icon-circle a {
+	color: #282A2D;
+}
+.icon-circle-other {
+	margin-bottom: 0px;
+	margin-right: -4px;
+}
+
+.icon-circle:hover {
+	background-color: #BDBDBD;
+	transition: background-color 0.15s linear;
+}
+
+.project-graphic {
+	height: 169px;
+}
+
+/* Classes for using different card background graphics */
+.pg1 {
+	background: url('../assets/images/card-graphic-2-alt.svg') no-repeat top center;
+	background-color: white;
+	background-size: 100%;
+}
+.pg2 {
+	background: url('../assets/images/card-graphic-9.svg') no-repeat bottom center;
+	background-color: white;
+	background-size: cover;
+}
+.pg3 {
+	background: url('../assets/images/card-graphic-4.svg') no-repeat center left;
+	background-color: white;
+	background-size: cover;
+}
+.pg4 {
+	background: url('../assets/images/card-graphic-6.svg') no-repeat center left;
+	background-color: white;
+	background-size: cover;
+}
+
+@media screen and (max-width: 992px){
+	.pg1, .pg2, .pg3, .pg4 {
+		background-size: auto;
+		background-position-x: left;
+	}
+	.project-box {
+		background: linear-gradient(-90deg, #ffffff 13%,#f5f5f5 31%,#f5f5f5 100%);	
+	}
+}
+
+.project-graphic a {
+	color: inherit;
+	display: none;
+}
+
+/* Resize icon circle and set visible for mobile and smaller devices. */
+@media screen and (max-width: 992px) {
+	.icon-circle {
+		height: 72px;
+		width: 72px;
+		margin-bottom: 0px;
+	}
+	.project-graphic a {
+		display: inline-block;
+	}
+}
+
 /* Experience */
+
+.exp-row {
+	width: 90%;
+	margin: auto;
+}
 
 .exp-title {
 	font-family: "sofia-pro";
 	font-weight: 700;
 	font-size: 24px;
 	text-align: left;
+	padding-top: 10px;
+	padding-left: 25px;
 	color: #282A2D;
 }
 
 .exp-date {
+	height: 100%;
+}
+
+.exp-date div {
 	font-family: "sofia-pro";
 	font-size: 24px;
 	text-align: right;
@@ -236,17 +469,18 @@ body {
 
 .exp-company {
 	font-style: italic;
-	padding-bottom: 10px;
+	padding: 15px 0px 10px 25px;
 }
 
 .exp-div {
+	width: 100%;
 	border-radius: 10px;
     border: 2px solid #eee;	
 }
 
 .exp-resume {
 	font-family: "sofia-pro";
-	font-weight: 700;
+	font-weight: 400;
 	font-size: 24px;
 	text-align: center;
 	color: #282A2D;
@@ -259,7 +493,7 @@ body {
   width: 15px;
   background-color: #282A2D;
   border-radius: 50%;
-  margin: 5px auto 5px auto;
+  margin: 4px auto 4px auto;
 }
 
 .line {
@@ -268,6 +502,26 @@ body {
 	border: 3px solid #CD8E50;
 	border-radius: 5px;
 	margin: auto;
+}
+
+/* Resize experience section when changing to small screens. */
+@media screen and (max-width: 578px) {
+	.exp-row {
+		width: 100%;
+		margin: 0;
+	}
+	.exp-title {
+		padding: 15px;
+	}
+	.exp-company {
+		padding: 0px 15px 0px 15px;
+		font-size: 18px;
+	}
+	.exp-date div {
+		/* Need to override bootstrap p-2 padding. */
+		padding: 15px 0px 15px 0px !important;
+		font-size: 18px;
+	}
 }
 
 /* Other */
@@ -280,20 +534,83 @@ body {
 	margin-top: 25px;
 }
 
-.other-box img, .fun-fact img {
-	position: absolute;
-	left: 0;
-	right: 0;
-	top: -25px;
-	width: 70px;
+@media screen and (max-width: 578px) {
+	.other-box {
+		width: 95%;
+	};
+}
+@media screen and (max-width: 768px) {
+	.other-box {
+		height: auto;	
+	}
+}	
+
+.other-title {
+	height: 80%;
+}
+
+.other-title p {
+	font-family: "sofia-pro";
+	font-weight: 700;
+	font-size: 36px;
+	line-height: .9em;
+	text-align: left;
+	padding-right: 0;
+	color: #282A2D;
+}
+
+.other-content {
+	padding-bottom: 15px;
+	height: 100%;
+}
+
+.other-right-border {
+	height: 100%;
+    width: 100%;
+    position: absolute;
+    top: 0px;
+    right: 0px;	
+    border-radius: 0px 8px 8px 3px;
+    overflow: visible;
+    background: #f5f5f5;
+}
+
+.other-link {
+	font-family: "sofia-pro";
+	font-weight: 700;
+	font-size: 36px;
+	line-height: .9em;
+	text-align: left;
+	padding-right: 0;
+	font-size: 24px;
+	color: #CD5D51;
+}
+
+.other-link:hover {
+	color: #CD8E50;
+	opacity: 1;
+	transition: color 0.15s linear;
+}
+.coming-soon {
+	height: 80%;
+}
+
+.coming-soon p {
+	font-family: "sofia-pro";
+	font-weight: 700;
+	font-size: 36px;
+	line-height: 1em;
+	text-align: right;
+	padding-right: 0;
+	color: #CD5D51;
 }
 
 .fun-fact {
 	width: 60%;
-	height: 140px;
 	border-radius: 10px;
 	border: 2px solid #eee;
 	margin-top: 25px;
+	padding-bottom: 25px;
 }
 
 .fun-fact p {
@@ -310,6 +627,11 @@ body {
 	color: #34727E;
 }
 
+#get-new-fact span:hover {
+	opacity: 0.8;
+	transition: opacity 0.15s linear;
+}
+
 #random-fun-fact {
 	font-family: "sofia-pro";
 	font-weight: 700;
@@ -322,9 +644,42 @@ body {
 	font-size: 20px;
 }
 
-
 .pin {
-	height: 40px; /* Value here (roughly) should be height of pin-0.svg (-) the top: -XXpx; value from .other-box img. */
+	/* Value here (roughly) should be height of pin-0.svg (-) the top: -XXpx; value from .other-box img. */
+	height: 40px; 
+}
+
+.pin img {
+	position: absolute;
+	left: 0;
+	right: 0;
+	top: -25px;
+	width: 70px;
+}
+
+
+.triangle-corner {
+	border-bottom: 20px solid red;
+	border-left: 20px solid transparent;
+}
+
+@media screen and (max-width: 568px) {
+	.other-title p {
+		font-size: 36px;
+	}
+}
+@media screen and (min-width: 569px) and (max-width: 768px){
+	.coming-soon p {
+		font-size: 30px;
+	}
+	.other-title p {
+		font-size: 30px;
+	};
+}
+@media screen and (min-width: 769px) and (max-width: 991px){
+	.other-title p {
+		font-size: 32px;
+	}
 }
 
 /* Footer */
@@ -341,6 +696,13 @@ body {
 .footer-links {
 	position: relative;
 	height: 60px;
+}
+
+.footer-tagline {
+	background-color: #f5f5f5;
+	font-size: 12px;
+	line-height: 1em;
+	padding: 0px 0px 10px 0px;
 }
 
 .footer svg {
@@ -423,6 +785,23 @@ body {
 	overflow: hidden;
 }
 
+
+@media screen and (max-width: 578px) {
+	.fun-fact {
+		width: 95%;
+	}
+	.exp-div {
+		width: 95%;
+		margin: auto;
+	}
+	.exp-resume {
+		width: 95%;
+	}
+	.project-box {
+		width: 95%;
+	}
+}
+
 /* All credit to Alex Gurevich for the animation. (fabriceleven.com) */
 @-webkit-keyframes fadeIn { from { opacity:0; } to { opacity:1; } }
 @-moz-keyframes fadeIn { from { opacity:0; } to { opacity:1; } }
@@ -450,10 +829,28 @@ animation-delay: .7s;
 }
 
 
+/* Google material-icon-specific css */
+
+/* Rules for sizing the icon. */
+.material-icons.md-18 { font-size: 18px; }
+.material-icons.md-24 { font-size: 24px; }
+.material-icons.md-36 { font-size: 36px; }
+.material-icons.md-48 { font-size: 48px; }
+.material-icons.md-72 { font-size: 72px; }
+
+/* Rules for using icons as black on a light background. */
+.material-icons.md-dark { color: rgba(0, 0, 0, 0.54); }
+.material-icons.md-dark.md-inactive { color: rgba(0, 0, 0, 0.26); }
+.material-icons.md-gray { color: #424242; }
+
+/* Rules for using icons as white on a dark background. */
+.material-icons.md-light { color: rgba(255, 255, 255, 1); }
+.material-icons.md-light.md-inactive { color: rgba(255, 255, 255, 0.3); }
+
 /* Debug code */
  
-/** {
-    background: #000 !important;
-    color: #0f0 !important;
-    outline: solid #f00 1px !important;
-}*/
+/* * {
+	background: #000 !important;
+	color: #0f0 !important;
+	outline: solid #f00 1px !important;
+} */

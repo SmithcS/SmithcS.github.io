@@ -1,0 +1,115 @@
+body {
+	background: white;
+}
+
+.project-title {
+	margin-top: 50px;
+	margin-bottom: 30px;
+}
+
+.project-title p {
+	font-family: "sofia-pro";
+	font-weight: 700;
+	font-size: 122px;
+	line-height: 1;
+	color: #CD5D51;
+}
+
+.project-title-smaller p {
+	font-family: "sofia-pro";
+	font-weight: 700;
+	font-size: 96px;
+	line-height: 1;
+	color: #CD5D51;
+}
+
+/* Responsive text for project title */
+@media screen and (max-width: 324px) {
+	.project-title-smaller p {
+		font-size: 60px;
+		text-align: center;
+		padding-top: 15px;
+		padding-bottom: 15px;
+	}
+}
+@media screen and (min-width: 325px) and (max-width: 767px) {
+	.project-title p {
+		font-size: 84px;
+	}
+	.project-title-smaller p {
+		font-size: 72px;
+		text-align: center;
+		padding-top: 15px;
+		padding-bottom: 15px;
+	}
+}
+@media screen and (min-width: 768px) and (max-width: 991px){
+	.project-title p {
+		font-size: 96px;
+	}
+	.project-title-smaller p {
+		font-size: 68px;
+	}
+}
+@media screen and (min-width: 992px) and (max-width: 1199px) {
+	.project-title-smaller p {
+		font-size: 96px;
+	}
+}
+@media screen and (min-width: 1200px) {
+	.project-title-smaller p {
+		font-size: 110px;
+	}
+}
+
+
+
+.project-content {
+	padding-top: 50px;
+	padding-bottom: 50px;
+}
+
+.project-content p {
+	font-family: "sofia-pro-soft";
+	font-size: 20px;
+	line-height: 1.5;
+	text-align: left;
+	padding-top: 5px;
+	padding-bottom: 5px;	
+}
+
+/* HackPSU Website Project Page */
+
+/* Before I Die Project Page */
+
+.before-i-die-title {
+	width: 60%;
+}
+
+.bidw-title-2 {
+	font-family: "sofia-pro";
+	font-weight: 700;
+	font-size: 54px;
+}
+.bidw-title-2-sub {
+	font-family: "sofia-pro";
+	font-weight: 700;
+	font-size: 28px;
+}
+.bidw-entries {
+	font-size: 18px;
+}
+.bidw-images {
+	padding-bottom: 30px;
+}
+.bidw-images div {
+	padding-top: 15px;
+}
+
+.before-i-die-column {
+	width: 40%;
+}
+
+.before-i-die-graphic {
+	padding: 20px;
+}
