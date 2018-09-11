@@ -63,11 +63,6 @@ html {
 }
 
 body {
-<<<<<<< HEAD
-	/* background: url('../assets/images/stripes.svg') no-repeat fixed right top;
-	background-size: 50%; */
-=======
->>>>>>> new-website
 	font-family: "sofia-pro-soft";
 	font-size: 18px;
 	line-height: 1.25;
@@ -216,10 +211,6 @@ a:hover {
 
 .header-text p {
 	padding: 10px;
-}
-
-.header-text {
-	margin-top: 75px;
 }
 
 .header-link a {
