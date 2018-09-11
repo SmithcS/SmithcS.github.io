@@ -74,6 +74,7 @@ body {
 /* Removing the underline from all links */
 a {
 	text-decoration: none !important;
+	transition: opacity 0.15s ease-in-out;
 }
 
 /* Fixeds page width problem on mobile devices due to large words. */
@@ -120,7 +121,7 @@ p {
 a:hover {
 	cursor: pointer;
 	opacity: 0.7;
-	transition: opacity 0.15s linear;
+	transition: opacity 0.15s ease-in-out;
 }
 
 .container {
@@ -354,6 +355,7 @@ a:hover {
 
 .project-more a:hover {
 	opacity: 1;
+	transition: color 0.15s ease-in-out;
 }
 
 .icon-circle {
@@ -363,6 +365,7 @@ a:hover {
   border-radius: 50%;
   margin-bottom:  37.5px;
   margin-right: 20px;
+  transition: background-color 0.15s ease-out;
 }
 .icon-circle a {
 	color: #282A2D;
@@ -374,7 +377,7 @@ a:hover {
 
 .icon-circle:hover {
 	background-color: #BDBDBD;
-	transition: background-color 0.15s linear;
+	transition: background-color 0.15s ease-in-out;
 }
 
 .project-graphic {
@@ -575,13 +578,15 @@ a:hover {
 	padding-right: 0;
 	font-size: 24px;
 	color: #CD5D51;
+	transition: color 0.15s ease-in-out;
 }
 
 .other-link:hover {
 	color: #CD8E50;
 	opacity: 1;
-	transition: color 0.15s linear;
+	transition: color 0.15s ease-in-out;
 }
+
 .coming-soon {
 	height: 80%;
 }
@@ -708,11 +713,8 @@ a:hover {
 	width: 100%;
 	margin: auto;
 	color: #282A2D;
-}
-
-.footer svg:hover {
-	opacity: 0.8;
-	transition: opacity 0.15s linear;
+	opacity: 1;
+	transition: opacity 0.5s ease-in-out;
 }
 
 .footer-block-1 {
