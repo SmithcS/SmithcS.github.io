@@ -71,6 +71,11 @@ body {
 	margin-bottom: 60px;
 }
 
+/* Removing the underline from all links */
+a {
+	text-decoration: none !important;
+}
+
 /* Fixeds page width problem on mobile devices due to large words. */
 p {
 	word-break: break-word;
@@ -113,6 +118,7 @@ p {
 }
 
 a:hover {
+	cursor: pointer;
 	opacity: 0.7;
 	transition: opacity 0.15s linear;
 }
@@ -157,10 +163,6 @@ a:hover {
 
 
 /* Header */
-
-.bg {
-
-}
 
 .header {
 	background: url('../assets/images/stripes2.svg') no-repeat fixed right top;
@@ -360,9 +362,16 @@ a:hover {
   background-color: #E0E0E0;
   border-radius: 50%;
   margin-bottom:  37.5px;
-  box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+  margin-right: 20px;
 }
-ope
+.icon-circle a {
+	color: #282A2D;
+}
+.icon-circle-other {
+	margin-bottom: 0px;
+	margin-right: -4px;
+}
+
 .icon-circle:hover {
 	background-color: #BDBDBD;
 	transition: background-color 0.15s linear;
@@ -510,12 +519,16 @@ ope
 	.other-box {
 		height: auto;	
 	}
+}	
+
+.other-title {
+	height: 80%;
 }
 
 .other-title p {
 	font-family: "sofia-pro";
 	font-weight: 700;
-	font-size: 48px;
+	font-size: 36px;
 	line-height: .9em;
 	text-align: left;
 	padding-right: 0;
@@ -524,6 +537,48 @@ ope
 
 .other-content {
 	padding-bottom: 15px;
+	height: 100%;
+}
+
+.other-right-border {
+	height: 100%;
+    width: 100%;
+    position: absolute;
+    top: 0px;
+    right: 0px;	
+    border-radius: 0px 8px 8px 3px;
+    overflow: visible;
+    background: #f5f5f5;
+}
+
+.other-link {
+	font-family: "sofia-pro";
+	font-weight: 700;
+	font-size: 36px;
+	line-height: .9em;
+	text-align: left;
+	padding-right: 0;
+	font-size: 24px;
+	color: #CD5D51;
+}
+
+.other-link:hover {
+	color: #CD8E50;
+	opacity: 1;
+	transition: color 0.15s linear;
+}
+.coming-soon {
+	height: 80%;
+}
+
+.coming-soon p {
+	font-family: "sofia-pro";
+	font-weight: 700;
+	font-size: 36px;
+	line-height: 1em;
+	text-align: right;
+	padding-right: 0;
+	color: #CD5D51;
 }
 
 .fun-fact {
@@ -549,7 +604,6 @@ ope
 }
 
 #get-new-fact span:hover {
-	cursor: pointer;
 	opacity: 0.8;
 	transition: opacity 0.15s linear;
 }
@@ -579,6 +633,13 @@ ope
 	width: 70px;
 }
 
+
+.triangle-corner {
+	border-bottom: 20px solid red;
+	border-left: 20px solid transparent;
+}
+	
+
 @media screen and (max-width: 568px) {
 	.other-title p {
 		font-size: 36px;
@@ -604,6 +665,13 @@ ope
 .footer-links {
 	position: relative;
 	height: 60px;
+}
+
+.footer-tagline {
+	background-color: #f5f5f5;
+	font-size: 12px;
+	line-height: 1em;
+	padding: 0px 0px 10px 0px;
 }
 
 .footer svg {
@@ -742,6 +810,7 @@ animation-delay: .7s;
 /* Rules for using icons as black on a light background. */
 .material-icons.md-dark { color: rgba(0, 0, 0, 0.54); }
 .material-icons.md-dark.md-inactive { color: rgba(0, 0, 0, 0.26); }
+.material-icons.md-gray { color: #424242; }
 
 /* Rules for using icons as white on a dark background. */
 .material-icons.md-light { color: rgba(255, 255, 255, 1); }
