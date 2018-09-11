@@ -23,6 +23,7 @@ body {
 	color: #CD5D51;
 }
 
+/* Responsive text for project title */
 @media screen and (max-width: 324px) {
 	.project-title-smaller p {
 		font-size: 60px;
